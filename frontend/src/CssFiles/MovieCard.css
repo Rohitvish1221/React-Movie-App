@@ -1,0 +1,98 @@
+.movie-card {
+  max-width: fit-content;           /* This can be problematic in grid layouts */
+  background-color: #1e1e1e;        /* Dark background for a card look */
+  border-radius: 10px;              /* Smooth rounded corners */
+  overflow: hidden;                 /* Clips overflowing child content */
+  display: flex;                    /* Makes it a flex container */
+  flex-direction: column;          /* Children stack vertically */
+  justify-content: space-between;  /* Spaces children evenly vertically */
+  position: relative;              /* Useful for layering content */
+  transition: transform 0.2s ease; /* Enables smooth hover/transform effects */
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+
+
+.movie-card img {
+  width: 100%;
+  max-width: 320px;
+  height: 445px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.favorite-btn {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.favorite-btn:hover {
+  background-color: #ff2f2f;
+}
+
+.favorite-btn:focus {
+  outline: none;
+}
+
+
+.movie-info {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.movie-info h3 {
+    font-size: 1.2rem;
+  padding: 0;
+}
+
+.movie-info p {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    font-size: 0.9rem;
+  }
+  .movie-info {
+    padding: 0.75rem;
+  }
+  .favorite-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
+
+.details-link {
+  display: flex; 
+  justify-content: center;
+  padding: 0.8rem 0;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}

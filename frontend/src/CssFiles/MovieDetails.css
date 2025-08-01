@@ -1,0 +1,86 @@
+.topButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.favorite-btn {
+  background-color: #1A1A1A;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 250px;
+  transition: border-color 0.25s;
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.favorite-btn:focus,
+.favorite-btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: row; /* ✅ Horizontal layout on desktop */
+  justify-content: start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.movie-info .left {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.movie-info .left img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie-info .left h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.movie-info .right {
+  flex: 2;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+/* ✅ RESPONSIVE STYLES for phone (below 600px) */
+@media (max-width: 600px) {
+  .movie-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .movie-info .right {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .movie-info .left {
+    text-align: center;
+  }
+}
