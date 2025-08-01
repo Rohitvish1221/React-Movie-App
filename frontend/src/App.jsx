@@ -1,7 +1,7 @@
 import "./CssFiles/App.css";
 import Favorites from "./Pages/Favorites";
 import Home from "./Pages/Home";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import MovieSearch from "./Components/MovieSearch";
 import SearchResults from "./Pages/SearchResults";
@@ -13,12 +13,15 @@ function App() {
       <NavBar />
       <MovieSearch/>
       <main className="main-content">
+        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
+        </BrowserRouter>
+
       </main>
     </div>
   );
