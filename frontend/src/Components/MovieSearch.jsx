@@ -1,6 +1,5 @@
 // MovieSearch.jsx
 import React, { useState } from "react";
-import axios from "axios";
 
 const MovieSearch = () => {
     const [] = useState("");
