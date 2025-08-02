@@ -9,7 +9,6 @@ import MovieDetails from "./Pages/MovieDetails";
 
 function App() {
   return (
-    <BrowserRouter>
       <div>
         <NavBar />
         <MovieSearch />
@@ -22,7 +21,6 @@ function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
   );
 }
 

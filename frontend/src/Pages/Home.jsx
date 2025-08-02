@@ -4,7 +4,7 @@ import MovieCard from "../Components/MovieCard";
 import "../CssFiles/Home.css";
 import axios from "axios";
 
-const API_KEY = "c38c5eac"; // Replace with your key
+const API_KEY = import.meta.env.VITE_API_KEY; // Replace with your key
 
 function Home() {
     const [searchQuery, setSearchQuery] = useState("");

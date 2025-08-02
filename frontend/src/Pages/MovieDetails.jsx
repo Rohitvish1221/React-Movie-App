@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../CssFiles/MovieDetails.css";
 
-const API_KEY = "c38c5eac"; 
+const API_KEY = import.meta.env.VITE_API_KEY; // Replace with your key
 
 function MovieDetails() {
     const { id } = useParams(); // 👈 imdbID from the URL

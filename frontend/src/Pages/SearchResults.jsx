@@ -4,7 +4,7 @@ import axios from "axios";
 import MovieCard from "../Components/MovieCard";
 import "../CssFiles/SearchResults.css";
 
-const API_KEY = "c38c5eac";
+const API_KEY = import.meta.env.VITE_API_KEY; // Replace with your key
 
 const SearchResults = () => {
     const location = useLocation();
